@@ -1,6 +1,0 @@
-const fistNameError = "//*[text()='Please enter your first name']"
-const lastNameError = "//*[text()='Please enter your last name']"
-const emailNewError = "//*[text()='Please enter your e-mail address']"
-const passwordError = "//*[text()='Please use a password of at least 8 characters with at least one lowercase letter, one uppercase letter, one number and one special character.']"
-const password2Error = "//*[text()='Please re-enter the password']"
-const checkbox2Error = "Please accept the Terms and Conditions and Privacy Policy"
