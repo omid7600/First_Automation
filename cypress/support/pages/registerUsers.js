@@ -7,5 +7,5 @@ const password2 = "//input[@id='password2']"
 const checkbox1 = "//span[@class='checkbox__checkbox checkbox__checkbox--alignTop checkbox__checkbox--//"
 const checkBox2 = "//span[@class='checkbox__checkbox checkbox__checkbox--alignTop']"
 const buttonSubmit = "//button[@id='register-submit']"
-const email = "//input[@id='email'and@class='input input----text']"
+const emailDown = "//input[@id='email'and@class='input input----text']"
 
