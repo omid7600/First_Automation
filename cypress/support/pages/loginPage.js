@@ -21,12 +21,12 @@
 //         this.elements.loginPasswordInput().type(password);
 //     }
 //
-//     typeButtonSubmit(submit) {
-//         this.elements.loginButtonSubmit().type(submit);
+//     clickButtonSubmit(submit) {
+//         this.elements.loginButtonSubmit().click(submit);
 //     }
 //
-//     typeLoginForgotten(forgotten) {
-//         this.elements.loginForgotten().type(forgotten);
+//     clickLoginForgotten(forgotten) {
+//         this.elements.loginForgotten().click(forgotten);
 //     }
 //
 //     typeLoginEmailInputError(Error) {
