@@ -1,0 +1,8 @@
+class CookiePage {
+
+    elements= {
+
+
+
+}
+}
