@@ -7,8 +7,6 @@ class loginPage {
         loginButtonSubmit:()=>cy.get('//button[@id="login-submit"]'),
         loginForgotten:()=>cy.get(".existingAccount__row--left > .existingAccount__forgotten"),
         loginEmailInputError:()=>cy.get('//label[@id="loginEmail-error"]'),
-
-
     }
 
 
@@ -21,15 +19,15 @@ class loginPage {
         this.elements.loginPasswordInput().type(password);
     }
 
-    clickButtonSubmit(submit) {
+    clickButtonSubmit() {
         this.elements.loginButtonSubmit().click();
     }
 
-    clickLoginForgotten(forgotten) {
+    clickLoginForgotten() {
         this.elements.loginForgotten().click();
     }
 
-    typeLoginEmailInputError(Error) {
+    typeLoginEmailInputError() {
         this.elements.loginEmailInputError().type(Error);
 
     }
