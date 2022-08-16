@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/omid7600/First_Automation#readme",
   "devDependencies": {
-    "cypress": "^10.4.0"
+    "cypress": "^10.4.0",
+    "cypress-xpath": "^2.0.1"
   }
 }

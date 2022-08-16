@@ -1,3 +1,6 @@
+const xpath = require('cypress-xpath');
+
+
 class cookiePage {
 
     elements = {

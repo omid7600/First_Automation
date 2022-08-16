@@ -11,8 +11,8 @@ class registerUserPage{
         checkBoxRuleApprove:()=>cy.get('.accountNew__agbCheckbox > .accountNew__checkbox > .checkbox.checkbox--alignTop'),
         buttonSubmit:()=>cy.get('//button[@id="register-submit"]'),
         emailDownInput:()=>cy.get('//input[@id="email"and@class="input input----text"]'),
-        firstNameInputerror:()=>cy.get('//span[@id="firstName-error"]'),
-        lastNameInputerror:()=>cy.get('//span[@id="lastName-error"]'),
+        firstNameInputError:()=>cy.get('//span[@id="firstName-error"]'),
+        lastNameInputError:()=>cy.get('//span[@id="lastName-error"]'),
         passwordRepInputError:()=>cy.get('//span[@id="password2-error"]'),
         checkBoxRuleApproveError:()=>cy.get('//span[@id="accountNew__agbBoxErrorId"]'),
 
@@ -40,7 +40,7 @@ class registerUserPage{
         this.elements.passwordInput().type(password);
     }
 
-    typePasswordRep(passwordrep)
+    typePasswordRep(passwordRep)
     {
         this.elements.passwordRepInput().type(passwordrep);
     }
