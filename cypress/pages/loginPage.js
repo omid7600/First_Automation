@@ -1,12 +1,15 @@
+const xpath = require('cypress-xpath');
+
+
 class loginPage {
 
 
     elements = {
-        loginEmailInput:()=>cy.get('//input[@id="loginEmail"]'),
-        loginPasswordInput:()=>cy.get('//input[@id="loginPassword"]'),
-        loginButtonSubmit:()=>cy.get('//button[@id="login-submit"]'),
-        loginForgotten:()=>cy.get(".existingAccount__row--left > .existingAccount__forgotten"),
-        loginEmailInputError:()=>cy.get('//label[@id="loginEmail-error"]'),
+        loginEmailInput:()=>cy.xpath('//input[@id="loginEmail"]'),
+        loginPasswordInput:()=>cy.xpath('//input[@id="loginPassword"]'),
+        loginButtonSubmit:()=>cy.xpath('//button[@id="login-submit"]'),
+        loginForgotten:()=>cy.xpath(".existingAccount__row--left > .existingAccount__forgotten"),
+        loginEmailInputError:()=>cy.xpath('//label[@id="loginEmail-error"]'),
     }
 
 
