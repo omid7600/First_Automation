@@ -1,8 +1,7 @@
-const xpath = require('cypress-xpath');
+require('cypress-xpath');
 
 
 class loginPage {
-
 
     elements = {
         loginEmailInput:()=>cy.xpath('//input[@id="loginEmail"]'),
@@ -11,8 +10,6 @@ class loginPage {
         loginForgotten:()=>cy.xpath(".existingAccount__row--left > .existingAccount__forgotten"),
         loginEmailInputError:()=>cy.xpath('//label[@id="loginEmail-error"]'),
     }
-
-
 
     typeEmail(email) {
         this.elements.loginEmailInput().type(email);
@@ -34,8 +31,5 @@ class loginPage {
         this.elements.loginEmailInputError().type(Error);
 
     }
-
-
-
 }
 module.exports = new loginPage();

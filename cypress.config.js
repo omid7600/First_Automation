@@ -7,5 +7,6 @@ module.exports = defineConfig({
     },
     baseUrl:"https://www.hoeffner.de",
     chromeWebSecurity:false,
+    defaultCommandTimeout : 6000,
   },
 });
