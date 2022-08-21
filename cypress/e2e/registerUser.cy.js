@@ -70,7 +70,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
 
 
     })
-//
+
     it('unsuccessfully register: without checkbox to accept rule', () => {
         registerUserPage.typeFirstName('omid');
         registerUserPage.typeLastName('mohamadyari');
@@ -81,7 +81,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
         registerUserPage.clickButtonSubmit();
 
     })
-//
-//
-//
-// })
+
+
+
+})
