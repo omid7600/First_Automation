@@ -15,13 +15,19 @@ class registerUserPage{
 
         emailDownInput:()=>cy.xpath('//input[@id="email"and@class="input input----text"]'),
 
+        salutationInputError:()=>cy.xpath('//span[@id="salutation-error"]'),
         firstNameInputError:()=>cy.xpath('//span[@id="firstName-error"]'),
         lastNameInputError:()=>cy.xpath('//span[@id="lastName-error"]'),
         passwordRepInputError:()=>cy.xpath('//span[@id="password2-error"]'),
-        passwordInputError:()=>cy.xpath('//span[@id="password-error"]]'),
-        checkBoxRuleApproveError:()=>cy.xpath('//span[@id="accountNew__agbBoxErrorId"]'),
+        passwordInputError:()=>cy.xpath('//span[@id="password-error"]'),
         ErrorMessageDuplicateEmail:()=>cy.xpath('//span[@id="email-error"]'),
+        checkBoxRuleApproveError:()=>cy.xpath('//span[@id="accountNew__agbBoxErrorId"]'),
 
+    }
+
+    setSalutation(gender)
+    {
+        this.elements.salutation().select(gender);
     }
 
     typeFirstName(firstname)
