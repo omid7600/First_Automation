@@ -42,7 +42,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
     it('unsuccessfully register: with empty input', () => {
         registerUserPage.clickButtonSubmit()
 
-        registerUserPage.elements.salutationInputError().should('have.text','This field is required.');
+        registerUserPage.elements.salutationInputError().should('have.text','Bitte geben Sie eine Anrede ein');
         registerUserPage.elements.firstNameInputError().should('have.text','Bitte geben Sie Ihren Vornamen ein');
         registerUserPage.elements.lastNameInputError().should('have.text','Bitte geben Sie Ihren Nachnamen ein');
         registerUserPage.elements.ErrorMessageDuplicateEmail().should('have.text','Bitte geben Sie Ihre E-Mail-Adresse ein');
