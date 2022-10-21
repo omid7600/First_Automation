@@ -10,8 +10,8 @@ class loginPage {
 
         loginForgotten:()=>cy.get(".existingAccount__row--left > .existingAccount__forgotten"),
 
-        loginEmailInputError:()=>cy.xpath('//label[@id="loginEmail-error"]'),
-        LoginPasswordInputError:()=>cy.xpath('//label[@id="loginPassword-error"]')
+        loginEmailError:()=>cy.xpath('//label[@id="loginEmail-error"]'),
+        LoginPasswordError:()=>cy.xpath('//label[@id="loginPassword-error"]')
     }
 
 
@@ -27,6 +27,12 @@ class loginPage {
     }
     clickLoginForgotten() {
         this.elements.loginForgotten().click();
+    }
+    GetErrorEmail(){
+        return this.elements.loginEmailError();
+    }
+    GetErrorPassword(){
+        return this.elements.LoginPasswordError();
     }
 
 }
