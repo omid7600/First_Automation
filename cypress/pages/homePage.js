@@ -22,7 +22,7 @@ class homePage {
 		shoppingCartHome:()=>cy.xpath('//a[@class="headerElement__link headerElement__link--cart headerElement__link--cartFilled"and@href="/warenkorb"],'),
 		couches:()=>cy.xpath('//a[text()="Sofas"and@href="/sofas"]'),
 		cornerSofas:()=>cy.xpath('//a[@class="sidebarNavigation__thirdLevelCategoryName"and@href="/schlafsofas"]'),
-		product001:()=>cy.xpath('//div[@class="wishlistIcon wishlistIcon--pointer"and@data-wish-list-entry-number="23403766"]'),
+		product001:()=>cy.xpath('//div[@data-wish-list-entry-number="23403766"]'),
 		product002:()=>cy.xpath('//div[@class="wishlistIcon wishlistIcon--pointer"and@data-wish-list-entry-number="20403530"]'),
 		product003:()=>cy.xpath('//div[@class="wishlistIcon wishlistIcon--pointer"and@data-wish-list-entry-number="25405544"]'),
 
