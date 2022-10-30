@@ -6,7 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl:"https://www.hoeffner.de",
+    //https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/
     chromeWebSecurity:false,
-    defaultCommandTimeout : 6000,
+    defaultCommandTimeout : 10000,
   },
 });
