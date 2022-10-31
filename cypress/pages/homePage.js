@@ -26,8 +26,7 @@ class homePage {
 		product002:()=>cy.xpath('//div[@class="wishlistIcon wishlistIcon--pointer"and@data-wish-list-entry-number="20403530"]'),
 		product003:()=>cy.xpath('//div[@class="wishlistIcon wishlistIcon--pointer"and@data-wish-list-entry-number="25405544"]'),
 
-		wishListHeart:()=>cy.get('data-wish-list-entry-number'),
-
+		wishListHeart:()=> cy.get('.wishlistIcon.wishlistIcon--pointer')
     }
 
 	clickFurniture() {
@@ -52,10 +51,14 @@ class homePage {
 		this.elements.wishListHome().click();
 	}
 
-	GetListOfWishArticle()
-	{
-		return(this.elements.wishListHeart());
-		cy.log("logs; ", this.elements.wishListHeart());
+	clickToRandomItemsWishList() {
+		const randomNo= Array.from({length: 50}, () => Cypress._.random(0,60));
+		cy.server();
+		for(let i = 0; i < 5; i++) {
+			this.elements.wishListHeart().eq(randomNo[i]).click();//.wait(500);
+			cy.route('PUT', '**/api/wishlist/**').as('putItem');
+			cy.wait('@putItem');
+		}
 	}
 }
 

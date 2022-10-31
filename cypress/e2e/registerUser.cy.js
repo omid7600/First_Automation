@@ -15,7 +15,7 @@ describe('Happy test cases: register a new user successfully', () => {
         const url = 'https://www.hoeffner.de/';
         email = faker.internet.email();
         registerUserPage.setSalutation(faker.name.sex());
-        registerUserPage.typeFirstName(faker.name.fullName());
+        registerUserPage.typeFirstName(faker.name.firstName());
         registerUserPage.typeLastName(faker.name.lastName());
         registerUserPage.typeEmail(email);
         registerUserPage.typePassword(password)
@@ -29,7 +29,7 @@ describe('Happy test cases: register a new user successfully', () => {
 describe('Unhappy test cases: unsuccessfully register a new user', () => {
     it('register a duplicate user', () => {
         registerUserPage.setSalutation(faker.name.sex());
-        registerUserPage.typeFirstName(faker.name.fullName());
+        registerUserPage.typeFirstName(faker.name.firstName());
         registerUserPage.typeLastName(faker.name.lastName());
         registerUserPage.typeEmail(email);
         registerUserPage.typePassword(password)
@@ -54,7 +54,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
     it('register a with unsecure password', () => {
         const pass = faker.internet.password();
         registerUserPage.setSalutation(faker.name.sex());
-        registerUserPage.typeFirstName(faker.name.fullName());
+        registerUserPage.typeFirstName(faker.name.firstName());
         registerUserPage.typeLastName(faker.name.lastName());
         registerUserPage.typeEmail(faker.internet.email());
         registerUserPage.typePassword(pass)
@@ -66,7 +66,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
 
     it('register a with unmatch password', () => {
         registerUserPage.setSalutation(faker.name.sex());
-        registerUserPage.typeFirstName(faker.name.fullName());
+        registerUserPage.typeFirstName(faker.name.firstName());
         registerUserPage.typeLastName(faker.name.lastName());
         registerUserPage.typeEmail(faker.internet.email());
         registerUserPage.typePassword(password)
@@ -79,7 +79,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
 
     it('unsuccessfully register: without checkbox to accept rule', () => {
         registerUserPage.setSalutation(faker.name.sex());
-        registerUserPage.typeFirstName(faker.name.fullName());
+        registerUserPage.typeFirstName(faker.name.firstName());
         registerUserPage.typeLastName(faker.name.lastName());
         registerUserPage.typeEmail(email);
         registerUserPage.typePassword(password)

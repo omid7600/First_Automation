@@ -6,9 +6,10 @@ WORKDIR /app
 
 COPY ./package.json .
 COPY ./cypress.config.js .
-COPY ./cypress ./cypress
 
 RUN npm install
+
+COPY ./cypress ./cypress
 
 ENTRYPOINT ["npx","cypress","run"]
 
