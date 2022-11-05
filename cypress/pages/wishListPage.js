@@ -31,6 +31,7 @@ class wishListPage {
 			this.elements.wishListHeart().eq(randomNo[i]).click().wait(500);
 			cy.route('PUT', '**/api/wishlist/**').as('putItem');
 			cy.wait('@putItem');
+			//test
 		}
 	}
 }
