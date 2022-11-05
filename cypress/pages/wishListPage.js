@@ -13,8 +13,8 @@ class wishListPage {
 	clickAllAddToCart() {
 		cy.server();
 		this.elements.allAddToCart().click();
-		cy.route('POST', '**/api/cart/addMultiple').as('postCall');
-		cy.wait('@postCall');
+		cy.route('PUT', '**/wunschliste').as('PutRequest');
+		cy.wait('@PutRequest');
 	}
 
 	typezipCodeInput(zipcode) {
@@ -28,7 +28,7 @@ class wishListPage {
 		const randomNo= Array.from({length: 50}, () => Cypress._.random(0,60));
 		cy.server();
 		for(let i = 0; i < 5; i++) {
-			this.elements.wishListHeart().eq(randomNo[i]).click();//.wait(500);
+			this.elements.wishListHeart().eq(randomNo[i]).click().wait(500);
 			cy.route('PUT', '**/api/wishlist/**').as('putItem');
 			cy.wait('@putItem');
 		}

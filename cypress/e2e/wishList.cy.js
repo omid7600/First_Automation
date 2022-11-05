@@ -30,7 +30,7 @@ describe('Wish List creation', () => {
     registerUserPage.typePasswordRep(password);
     registerUserPage.clickCheckboxRuleApprove();
     registerUserPage.clickButtonSubmit();
-    cy.url().should('eq', 'https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/');
+    cy.url().should('eq', 'https://www.hoeffner.de/');
   });
 
 
@@ -41,7 +41,7 @@ describe('Wish List creation', () => {
     wishListPage.typezipCodeInput('12161');
     wishListPage.clickAllAddToCart();
     wishListPage.clickGoToCart();
-    cy.url().should('eq', 'https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/warenkorb/');
+    cy.url().should('eq', 'https://www.hoeffner.de/warenkorb');
   });
 
 

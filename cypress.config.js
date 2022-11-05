@@ -5,7 +5,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl:"https://shop:kr!3G3rMMXXI@hoeffner.frontend.stage.ecom.aws.krieger-it.net",
+    baseUrl:"https://www.hoeffner.de/",
     //https://shop:kr!3G3rMMXXI@hoeffner.frontend.stage.ecom.aws.krieger-it.net
     chromeWebSecurity:false,
     defaultCommandTimeout : 10000,
