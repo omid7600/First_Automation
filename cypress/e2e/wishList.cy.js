@@ -1,6 +1,5 @@
 import cookiePage from "../pages/cookiePage";
-import loginPage from "../pages/loginPage";
-import homePage from"../pages/homePage"
+import wishListPage from "../pages/wishListPage";
 import {faker} from "@faker-js/faker";
 import registerUserPage from '../pages/registerUsersPage'
 
@@ -31,22 +30,25 @@ describe('Wish List creation', () => {
     registerUserPage.typePasswordRep(password);
     registerUserPage.clickCheckboxRuleApprove();
     registerUserPage.clickButtonSubmit();
-    cy.url().should('eq', 'https://www.hoeffner.de/');
+    cy.url().should('eq', 'https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/');
   });
+
 
   it('A registered user can add articles into the wish list', () => {
     cy.visit('/ecksofas');
-
-    homePage.clickToRandomItemsWishList();
-/*    homePage.clickCornerSofas();
-    homePage.clickProduct001();
-    homePage.clickProduct002();
-    homePage.clickProduct003();
-    homePage.clickWishListHome();*/
-
-
+    wishListPage.clickToRandomItemsWishList();
+    cy.visit('/wunschliste');
+    wishListPage.typezipCodeInput('12161');
+    wishListPage.clickAllAddToCart();
+    wishListPage.clickGoToCart();
+    cy.url().should('eq', 'https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/warenkorb/');
+  });
 
 
 
-  })
-})
+
+
+
+});
+
+

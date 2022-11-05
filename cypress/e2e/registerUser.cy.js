@@ -1,6 +1,6 @@
 import cookiePage from '../pages/cookiePage'
 import registerUserPage from '../pages/registerUsersPage'
-import homePage from '../pages/homePage'
+import homePage from '../pages/wishListPage'
 const { faker } = require('@faker-js/faker');
 
 beforeEach(()=>{
@@ -12,7 +12,7 @@ let email = "";
 
 describe('Happy test cases: register a new user successfully', () => {
     it('register a new user successfully for hoeffner website', () => {
-        const url = 'https://www.hoeffner.de/';
+        const url = 'https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/';
         email = faker.internet.email();
         registerUserPage.setSalutation(faker.name.sex());
         registerUserPage.typeFirstName(faker.name.firstName());
