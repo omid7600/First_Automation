@@ -7,7 +7,7 @@ class wishListPage {
 		zipCodeInput:()=>cy.xpath('//input[@class="input input--wishlist"]'),
 		allAddToCart:()=>cy.xpath('//button[text()="Alle Artikel in den Warenkorb"]'),
 		goToCart:()=>cy.get('#overlayRight > div > div.generalOverlay__content > div > div.addToCartOverlay__footer > a.addToCartOverlay__footerToCart > div > button'),
-
+		ToCheckOut:()=>cy.get('#responsive > div.mainContent > div.container > div.wrapper--b.cartOverviewContent > div > div.cartOverview > div.cartOverview__summary > div.cartOverview__summaryContainer.cartOverview__summaryContainer--desktop > div.cartOverview__summaryBox > div > div.summaryBox__line.summaryBox__line--checkoutButton > div > div.totalPriceAndCheckoutButton__button > button')
     }
 
 	clickAllAddToCart() {
@@ -31,8 +31,18 @@ class wishListPage {
 			this.elements.wishListHeart().eq(randomNo[i]).click().wait(500);
 			cy.route('PUT', '**/api/wishlist/**').as('putItem');
 			cy.wait('@putItem');
-			//test
+
 		}
+	}
+
+	clickToCheckOut() {
+
+			this.elements.ToCheckOut().click();
+
+
+
+
+
 	}
 }
 

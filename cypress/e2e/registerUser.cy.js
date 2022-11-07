@@ -12,7 +12,7 @@ let email = "";
 
 describe('Happy test cases: register a new user successfully', () => {
     it('register a new user successfully for hoeffner website', () => {
-        const url = 'https://hoeffner.frontend.stage.ecom.aws.krieger-it.net/';
+        const url = 'https://www.hoeffner.de/';
         email = faker.internet.email();
         registerUserPage.setSalutation(faker.name.sex());
         registerUserPage.typeFirstName(faker.name.firstName());

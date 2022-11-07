@@ -42,6 +42,8 @@ describe('Wish List creation', () => {
     wishListPage.clickAllAddToCart();
     wishListPage.clickGoToCart();
     cy.url().should('eq', 'https://www.hoeffner.de/warenkorb');
+    wishListPage.clickToCheckOut();
+
   });
 
 
