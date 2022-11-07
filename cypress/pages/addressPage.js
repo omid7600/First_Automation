@@ -3,60 +3,60 @@ require('cypress-xpath');
 
 class addressPage {
     elements = {
-        addressSalutation:()=>cy.xpath('//select[@id="salutation"]');
-        addressFirstName:()=>cy.xpath('//input[@id="firstname"]');
-        addressSurname:()=>cy.xpath('//input[@id="lastname"]');
-        addressAreaCode:()=>cy.xpath('//input[@id="phoneArea"]');
-        addressPhone:()=>cy.xpath('//input[@id="phone"]');
-        addressStreet:()=>cy.xpath('//input[@id="streetName"]');
-        addressHouseNumber:()=>cy.xpath('//input[@id="streetNumber"]');
-        addressSupplement:()=>cy.xpath('//input[@id="addressExtra"]');
-        addressFloor:()=>cy.xpath('//input[@id="floor"]');
-        BoxElevator:()=>cy.xpath('//span[@id="paymentAddressElevatorExists"]');
-        addressZip:()=>cy.xpath('//input[@id="zipCode"]');
-        addressCity:()=>cy.xpath('//input[@id="town"]');
+        salutation:()=>cy.xpath('//select[@id="salutation"]');
+        firstNameAddress:()=>cy.xpath('//input[@id="firstname"]');
+        surnameAddress:()=>cy.xpath('//input[@id="lastname"]');
+        areaCode:()=>cy.xpath('//input[@id="phoneArea"]');
+        phone:()=>cy.xpath('//input[@id="phone"]');
+        street:()=>cy.xpath('//input[@id="streetName"]');
+        houseNumber:()=>cy.xpath('//input[@id="streetNumber"]');
+        supplement:()=>cy.xpath('//input[@id="addressExtra"]');
+        Floor:()=>cy.xpath('//input[@id="floor"]');
+        boxElevator:()=>cy.xpath('//span[@id="paymentAddressElevatorExists"]');
+        Zip:()=>cy.xpath('//input[@id="zipCode"]');
+        city:()=>cy.xpath('//input[@id="town"]');
         addressButtonSubmit:()=>cy.xpath('//button[@id="address-submit"]');
     }
 
 
-    setaddressSalutation(gender) {
-        this.elements.addressSalutation().select(gender);
+    setSalutation(gender) {
+        this.elements.salutation().select(gender)
     }
-    typeaddressFirstName(firstname) {
-        this.elements.addressFirstName().type(firstname);
+    typeFirstname(firstname) {
+        this.elements.firstNameAddress().type(firstname);
     }
-    typeaddressSurname(lastname) {
-        this.elements.addressSurname().type(lastname);
+    typeSurnameAddress(lastname) {
+        this.elements.surnameAddress().type(lastname);
     }
-    typeaddressAreaCode(areacode) {
-        this.elements.addressAreaCode().type(areacode);
+    typeAreaCode(areacode) {
+        this.elements.areaCode().type(areacode);
     }
-    typeaddressPhone(phone) {
-        this.elements.addressPhone().type(phone);
+    typePhone(phone) {
+        this.elements.phone().type(phone);
     }
-    typeaddressStreet(street) {
-        this.elements.addressStreet().type(street);
+    typeStreet(street) {
+        this.elements.street().type(street);
     }
-    typeaddressHouseNumber(housenumber) {
-        this.elements.addressHouseNumber().type(housenumber);
+    typeHouseNumber(housenumber) {
+        this.elements.houseNumber().type(housenumber);
     }
-    typeaddressSupplement(supplement) {
-        this.elements.addressSupplement().type(supplement);
+    typeSupplement(supplement) {
+        this.elements.supplement().type(supplement);
     }
-    typeaddressFloor(floor) {
-        this.elements.addressFloor().type(floor);
+    typeFloor(floor) {
+        this.elements.Floor().type(floor);
     }
     clickBoxElevator() {
-        this.elements.clickBoxElevator().click();
+        this.elements.boxElevator().click();
     }
-    typwaddressZip(zip) {
-        this.elements.addressZip().type(zip);
+    typeZip(zip) {
+        this.elements.Zip().type(zip);
     }
-    typeaddressCity(city) {
-        this.elements.addressCity().type(city);
+    typeCity(city) {
+        this.elements.city().type(city);
     }
-    clickaddressButtonSubmit() {
-        this.elements.clickaddressButtonSubmit().click();
+    clickAddressButtonSubmit() {
+        this.elements.addressButtonSubmit().click();
     }
 
 

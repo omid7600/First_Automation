@@ -2,7 +2,7 @@ import cookiePage from "../pages/cookiePage";
 import wishListPage from "../pages/wishListPage";
 import {faker} from "@faker-js/faker";
 import registerUserPage from '../pages/registerUsersPage'
-
+import addressPage from '../pages/addressPage'
 
 /*describe('Happy test cases: login a  user successfully' , () => {
   it('Login a  user successfully for hoeffner website', () => {
@@ -43,6 +43,13 @@ describe('Wish List creation', () => {
     wishListPage.clickGoToCart();
     cy.url().should('eq', 'https://www.hoeffner.de/warenkorb');
     wishListPage.clickToCheckOut();
+
+
+
+
+
+
+
 
   });
 
