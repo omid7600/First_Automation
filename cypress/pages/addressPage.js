@@ -3,19 +3,19 @@ require('cypress-xpath');
 
 class addressPage {
     elements = {
-        salutation:()=>cy.xpath('//select[@id="salutation"]');
-        firstNameAddress:()=>cy.xpath('//input[@id="firstname"]');
-        surnameAddress:()=>cy.xpath('//input[@id="lastname"]');
-        areaCode:()=>cy.xpath('//input[@id="phoneArea"]');
-        phone:()=>cy.xpath('//input[@id="phone"]');
-        street:()=>cy.xpath('//input[@id="streetName"]');
-        houseNumber:()=>cy.xpath('//input[@id="streetNumber"]');
-        supplement:()=>cy.xpath('//input[@id="addressExtra"]');
-        Floor:()=>cy.xpath('//input[@id="floor"]');
-        boxElevator:()=>cy.xpath('//span[@id="paymentAddressElevatorExists"]');
-        Zip:()=>cy.xpath('//input[@id="zipCode"]');
-        city:()=>cy.xpath('//input[@id="town"]');
-        addressButtonSubmit:()=>cy.xpath('//button[@id="address-submit"]');
+        salutation:()=>cy.xpath('//select[@id="salutation"]'),
+        firstNameAddress:()=>cy.xpath('//input[@id="firstname"]'),
+        surnameAddress:()=>cy.xpath('//input[@id="lastname"]'),
+        areaCode:()=>cy.xpath('//input[@id="phoneArea"]'),
+        phone:()=>cy.xpath('//input[@id="phone"]'),
+        street:()=>cy.xpath('//input[@id="streetName"]'),
+        houseNumber:()=>cy.xpath('//input[@id="streetNumber"]'),
+        supplement:()=>cy.xpath('//input[@id="addressExtra"]'),
+        Floor:()=>cy.xpath('//input[@id="floor"]'),
+        boxElevator:()=>cy.xpath('//span[@id="paymentAddressElevatorExists"]'),
+        Zip:()=>cy.xpath('//input[@id="zipCode"]'),
+        city:()=>cy.xpath('//input[@id="town"]'),
+        addressButtonSubmit:()=>cy.xpath('//button[@id="address-submit"]')
     }
 
 
