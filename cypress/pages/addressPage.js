@@ -15,12 +15,21 @@ class addressPage {
         boxElevator:()=>cy.xpath('//span[@id="paymentAddressElevatorExists"]'),
         Zip:()=>cy.xpath('//input[@id="zipCode"]'),
         city:()=>cy.xpath('//input[@id="town"]'),
-        addressButtonSubmit:()=>cy.xpath('//button[@id="address-submit"]')
+        addressButtonSubmit:()=>cy.xpath('//button[@id="address-submit"]'),
+        phoneError:()=>cy.xpath('//label[@id="phone-error"]'),
+        phoneAreaError:()=>cy.xpath('//label[@id="phoneArea-error"]'),
+        houseNumberError:()=>cy.xpath('//label[@id="streetNumber-error"]'),
+        streetError:()=>cy.xpath('//label[@id="streetName-error"]'),
+        cityError:()=>cy.xpath('//label[@id="town-error"]'),
+        zipError:()=>cy.xpath('//label[@id="zipCode-error"]'),
+
+
+
     }
 
 
     setSalutation(gender) {
-        this.elements.salutation().select(gender)
+        this.elements.salutation().select(gender);
     }
     typeFirstname(firstname) {
         this.elements.firstNameAddress().type(firstname);
@@ -65,3 +74,5 @@ class addressPage {
 
 
 }
+
+module.exports = new addressPage();
