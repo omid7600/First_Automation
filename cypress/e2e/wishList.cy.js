@@ -4,17 +4,6 @@ import {faker} from "@faker-js/faker";
 import registerUserPage from '../pages/registerUsersPage'
 import addressPage from '../pages/addressPage'
 
-/*describe('Happy test cases: login a  user successfully' , () => {
-  it('Login a  user successfully for hoeffner website', () => {
-    cy.fixture('example').then((date)=>{
-      loginPage.typeEmail(date.email),
-          loginPage.typePassword(date.password)
-    });
-    loginPage.clickButtonSubmit();
-
-  });
-})*/
-
 describe('Wish List creation', () => {
   beforeEach(()=>{
     const password = 'Test123456qwertz!';
@@ -55,6 +44,8 @@ describe('Wish List creation', () => {
     addressPage.clickAddressButtonSubmit();
     addressPage.clickInstantlyRadioButton();
     addressPage.clickPostPaymentSubmit();
+
+    //elemetcart.should('have.length',wishListPage.countClickAddToWishList)
   });
 
 });
