@@ -3,10 +3,6 @@ import registerUserPage from '../pages/registerUsersPage'
 import homePage from '../pages/wishListPage'
 const { faker } = require('@faker-js/faker');
 
-beforeEach(()=>{
-    cy.visit('/registrierung');
-    cookiePage.clickSelectAllCookie();
-})
 const password = 'Test123456qwertz!';
 let email = "";
 

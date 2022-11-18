@@ -8,7 +8,7 @@ class loginPage {
         loginPasswordInput:()=>cy.xpath('//input[@id="loginPassword"]'),
         loginButtonSubmit:()=>cy.xpath('//button[@id="login-submit"]'),
 
-        loginForgotten:()=>cy.get(".existingAccount__row--left > .existingAccount__forgotten"),
+
 
         loginEmailError:()=>cy.xpath('//label[@id="loginEmail-error"]'),
         LoginPasswordError:()=>cy.xpath('//label[@id="loginPassword-error"]')
