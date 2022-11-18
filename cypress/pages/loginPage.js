@@ -7,9 +7,6 @@ class loginPage {
         loginEmailInput:()=>cy.xpath('//input[@id="loginEmail"]'),
         loginPasswordInput:()=>cy.xpath('//input[@id="loginPassword"]'),
         loginButtonSubmit:()=>cy.xpath('//button[@id="login-submit"]'),
-
-
-
         loginEmailError:()=>cy.xpath('//label[@id="loginEmail-error"]'),
         LoginPasswordError:()=>cy.xpath('//label[@id="loginPassword-error"]')
     }
@@ -25,9 +22,7 @@ class loginPage {
     clickButtonSubmit() {
         this.elements.loginButtonSubmit().click();
     }
-    clickLoginForgotten() {
-        this.elements.loginForgotten().click();
-    }
+
     GetErrorEmail(){
         return this.elements.loginEmailError();
     }

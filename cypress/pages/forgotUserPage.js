@@ -3,25 +3,22 @@ require('cypress-xpath');
 class forgotUserPage {
 
     elements = {
-        forgotten:()=>cy.get(".existingAccount__row--left > .existingAccount__forgotten"),
-        forgotEmailInput:()=>.cy.xpath('//input[@id="passwordForgottenEmail"]'),
-        forgotSubmitButton:()=>.cy.xpath('button[@id="passwordForgottenSubmitId"]'),
-        forgotEmailError:()=>.cy.xpath('label[@id="passwordForgottenEmail-error"]'),
-        forgotEmailEmptyError()=>.cy.xpath('l[@id="passwordForgottenEmail-error"]'),
+        forgotten:()=>cy.get('.existingAccount__forgotten'),
+        forgotEmailInput:()=>cy.xpath('//input[@class="input input----rightbound"]'),
+        forgotButtonSubmit:()=>cy.xpath('//button[@id="passwordForgottenSubmitId"]'),
+        forgotError:()=>cy.xpath('//label[@id="passwordForgottenEmail-error"]'),
     }
 
-    clickForgotten() {
-    this.elements.forgotten().click.();
-    }
-
-    typeForgotEmail(email) {
+    typeForgotEmailInput(email) {
     this.elements.forgotEmailInput().type(email);
     }
-
-    clickForgotSubmitButton() {
-    this.elements.forgotSubmitButton().click();
+    clickForgotten() {
+    this.elements.forgotten().click();
+    }
+    clickForgotButtonSubmit() {
+    this.elements.forgotButtonSubmit().click();
     }
 
-}
 
+}
 module.exports = new forgotUserPage();
