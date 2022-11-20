@@ -18,7 +18,7 @@ describe('Happy test cases: login a  user successfully' , function(){
         loginPage.typePassword(this.credentials.password);
         loginPage.clickButtonSubmit();
         cy.url().should('eq', 'https://www.hoeffner.de/');
-        cy.visit('/kundenkonto');
+       cy.visit('/kundenkonto');
         customerAccountPage.clickSignOut();
         cy.url().should('eq', 'https://www.hoeffner.de/login');
 

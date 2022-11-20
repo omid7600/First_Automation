@@ -3,6 +3,7 @@ import wishListPage from "../pages/wishListPage";
 import {faker} from "@faker-js/faker";
 import registerUserPage from '../pages/registerUsersPage'
 import addressPage from '../pages/addressPage'
+import payPage from '../pages/payPage'
 
 describe('Wish List creation', () => {
   beforeEach(()=>{
@@ -42,8 +43,8 @@ describe('Wish List creation', () => {
     addressPage.typeZip('36251');
     addressPage.typeCity('Bad Hersfeld');
     addressPage.clickAddressButtonSubmit();
-    addressPage.clickInstantlyRadioButton();
-    addressPage.clickPostPaymentSubmit();
+    payPage.clickInstantlyRadioButton();
+    payPage.clickPostPaymentSubmit();
 
     //elemetcart.should('have.length',wishListPage.countClickAddToWishList)
   });

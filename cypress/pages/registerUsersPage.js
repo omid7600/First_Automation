@@ -2,8 +2,7 @@ require('cypress-xpath');
 class registerUserPage{
 
     elements = {
-        salutation:()=>cy.xpath('//select[@id="salutation"]'),
-
+        salutation:()=>cy.xpath('select[@id="salutation"]'),
         firstNameInput:()=>cy.xpath('//input[@id="firstName"]'),
         lastNameInput:()=>cy.xpath('//input[@id="lastName"]'),
         emailNewAccountInput:()=>cy.get('.accountNew > .formInput.formInput--text > .formInput__inputContainer > #email'),
@@ -12,9 +11,7 @@ class registerUserPage{
         checkboxNewsletter:()=>cy.get('.accountNew__newsletterCheckbox >.accountNew__checkbox >.checkbox.checkbox--alignTop'),
         checkBoxRuleApprove:()=>cy.get('.accountNew__agbCheckbox > .accountNew__checkbox > .checkbox.checkbox--alignTop'),
         buttonSubmit:()=>cy.xpath('//button[@id="register-submit"]'),
-
         emailDownInput:()=>cy.xpath('//input[@id="email"and@class="input input----text"]'),
-
         salutationInputError:()=>cy.xpath('//span[@id="salutation-error"]'),
         firstNameInputError:()=>cy.xpath('//span[@id="firstName-error"]'),
         lastNameInputError:()=>cy.xpath('//span[@id="lastName-error"]'),

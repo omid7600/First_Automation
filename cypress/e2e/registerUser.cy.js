@@ -23,7 +23,7 @@ describe('Happy test cases: register a new user successfully', () => {
 })
 
 describe('Unhappy test cases: unsuccessfully register a new user', () => {
-    it('register a duplicate user', () => {
+        it('register a duplicate user', () => {
         registerUserPage.setSalutation(faker.name.sex());
         registerUserPage.typeFirstName(faker.name.firstName());
         registerUserPage.typeLastName(faker.name.lastName());
@@ -33,7 +33,7 @@ describe('Unhappy test cases: unsuccessfully register a new user', () => {
         registerUserPage.clickCheckboxRuleApprove();
         registerUserPage.clickButtonSubmit();
         registerUserPage.elements.ErrorMessageDuplicateEmail().should('have.text','Dieser Nutzer ist bereits vorhanden.');
-    })
+        })
 
     it('unsuccessfully register: with empty input', () => {
         registerUserPage.clickButtonSubmit()

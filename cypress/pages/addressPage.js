@@ -22,11 +22,7 @@ class addressPage {
         streetError:()=>cy.xpath('//label[@id="streetName-error"]'),
         cityError:()=>cy.xpath('//label[@id="town-error"]'),
         zipError:()=>cy.xpath('//label[@id="zipCode-error"]'),
-        //selectorPayment:()=>cy.get('div[class="paymentForm__radioSelect"][data-payment=directEBanking]').invoke('attr', 'href'),
-        instantlyRadioButton:()=>cy.get('div.paymentForm.paymentForm--payPal > div > div > div.paymentForm__radioSelect'),
-        //-- //span[@class="radioButton radioButton--checked"]
-        // .paymentForm.paymentForm--directEBanking > .accordion__content > .paymentForm__paymentContent > .paymentForm__button > .leftRightButtonBar > .leftRightButtonBar__leftButton #postPaymentFormHeader
-        postPaymentSubmit:()=>cy.xpath('//*[contains(@type,"submit")]'),
+
     }
 
 
@@ -69,13 +65,7 @@ class addressPage {
     clickAddressButtonSubmit() {
         this.elements.addressButtonSubmit().click();
     }
-    clickInstantlyRadioButton() {
 
-        this.elements.instantlyRadioButton().click();
-    }
-    clickPostPaymentSubmit() {
-        this.elements.postPaymentSubmit().eq(0).click();
-    }
 
 
 }

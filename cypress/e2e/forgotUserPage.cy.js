@@ -13,6 +13,20 @@ describe('Happy test cases: input valid email address for new password ', () => 
           cy.url().should('eq', 'https://www.hoeffner.de/passwortMail/gesendet');
   })
 
+})
+
+describe('Happy test cases: input valid email address for new password ', () => {
+  it('input email address', () => {
+  beforeEach(()=>{
+    cy.visit('/login');
+    forgotUserPage.clickForgotten();
+    forgotUserPage.typeForgotEmailInput('omid.mohamadyari.yahoo.con');
+    forgotUserPage.clickForgotButtonSubmit();
+    forgotUserPage.elements.forgotError()
+    cy.url().should('eq', 'https://www.hoeffner.de/passwortMail/gesendet');
+
+  })
 
 
+  })
 })
