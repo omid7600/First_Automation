@@ -2,7 +2,7 @@ require('cypress-xpath');
 class registerUserPage{
 
     elements = {
-        salutation:()=>cy.xpath('select[@id="salutation"]'),
+        salutation:()=>cy.xpath('//select[@id="salutation"]'),
         firstNameInput:()=>cy.xpath('//input[@id="firstName"]'),
         lastNameInput:()=>cy.xpath('//input[@id="lastName"]'),
         emailNewAccountInput:()=>cy.get('.accountNew > .formInput.formInput--text > .formInput__inputContainer > #email'),

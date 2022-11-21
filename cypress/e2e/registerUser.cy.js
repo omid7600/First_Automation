@@ -6,6 +6,11 @@ const { faker } = require('@faker-js/faker');
 const password = 'Test123456qwertz!';
 let email = "";
 
+beforeEach(()=>{
+    cy.visit('/registrierung');
+    cookiePage.clickSelectAllCookie();
+});
+
 describe('Happy test cases: register a new user successfully', () => {
     it('register a new user successfully for hoeffner website', () => {
         const url = 'https://www.hoeffner.de/';
