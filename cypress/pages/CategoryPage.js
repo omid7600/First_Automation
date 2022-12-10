@@ -1,6 +1,6 @@
 require('cypress-xpath');
 
-class wishListPage {
+class categoryPage {
 
     elements = {
 		wishListHeart:()=> cy.get('.wishlistIcon.wishlistIcon--pointer'),
@@ -47,4 +47,4 @@ class wishListPage {
 	}
 }
 
-module.exports = new wishListPage();
+module.exports = new categoryPage();

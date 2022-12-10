@@ -1,6 +1,6 @@
 import cookiePage from '../pages/cookiePage'
 import registerUserPage from '../pages/registerUsersPage'
-import homePage from '../pages/wishListPage'
+import homePage from '../pages/CategoryPage'
 const { faker } = require('@faker-js/faker');
 
 const password = 'Test123456qwertz!';

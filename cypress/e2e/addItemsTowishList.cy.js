@@ -1,5 +1,5 @@
 import cookiePage from "../pages/cookiePage";
-import wishListPage from "../pages/wishListPage";
+import wishListPage from "../pages/CategoryPage";
 import {faker} from "@faker-js/faker";
 import registerUserPage from '../pages/registerUsersPage'
 import addressPage from '../pages/addressPage'
